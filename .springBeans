@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beansProjectDescription>
 	<version>1</version>
-	<pluginVersion><![CDATA[3.2.0.201303060654-RELEASE]]></pluginVersion>
+	<pluginVersion><![CDATA[3.4.0.201310051539-RELEASE]]></pluginVersion>
 	<configSuffixes>
 		<configSuffix><![CDATA[xml]]></configSuffix>
 	</configSuffixes>
@@ -10,7 +10,7 @@
 		<config>src/main/webapp/WEB-INF/applicationContext.xml</config>
 		<config>src/main/webapp/WEB-INF/datasource-config.xml</config>
 		<config>src/main/webapp/WEB-INF/webflow-config.xml</config>
-		<config>src/main/webapp/WEB-INF/spring-security.xml</config>
+		<config>src/main/webapp/WEB-INF/security-config.xml</config>
 	</configs>
 	<configSets>
 		<configSet>
@@ -21,7 +21,7 @@
 				<config>src/main/webapp/WEB-INF/applicationContext.xml</config>
 				<config>src/main/webapp/WEB-INF/datasource-config.xml</config>
 				<config>src/main/webapp/WEB-INF/webflow-config.xml</config>
-				<config>src/main/webapp/WEB-INF/spring-security.xml</config>
+				<config>src/main/webapp/WEB-INF/security-config.xml</config>
 			</configs>
 			<profiles>
 			</profiles>

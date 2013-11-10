@@ -1,5 +1,9 @@
 package com.example.j2eeapp.services.impl;
 
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
 import com.example.j2eeapp.dao.UserDao;
 import com.example.j2eeapp.domain.UserEntity;
 import com.example.j2eeapp.services.UserService;
@@ -13,7 +17,7 @@ import com.example.j2eeapp.services.UserService;
  */
 
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService, UserDetailsService{
 
 		private UserDao userDao;
 	
@@ -33,6 +37,11 @@ public class UserServiceImpl implements UserService{
 
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
+	}
+
+	public UserDetails loadUserByUsername(String userName)  throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
