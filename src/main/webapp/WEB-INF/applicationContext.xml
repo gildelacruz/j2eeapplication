@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
- 
+
 <beans xmlns="http://www.springframework.org/schema/beans"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
  
         <import resource="datasource-config.xml" />
         <import resource="webflow-config.xml" />   
@@ -13,7 +13,10 @@
         
         <!-- Services Declarations -->
         <bean id="userService" class="com.example.j2eeapp.services.impl.UserServiceImpl">
-        	<property name="userDao" ref="userDao"></property>
+        	<property name="userDao" ref="userDao" />
         </bean>
-        
-</beans> 
+
+		<bean id="userAuthenticationProviderService" class="com.example.j2eeapp.services.impl.UserAuthenticationProviderServiceImpl">
+            <property name="authenticationManager" ref="authenticationManager" />
+        </bean>
+</beans>
