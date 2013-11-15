@@ -34,7 +34,7 @@ public class UserAuthenticationProviderServiceImpl implements UserAuthentication
 			return true;
 		} catch (AuthenticationException e) {
 			FacesContext.getCurrentInstance().addMessage(null, 
-					new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), "Sorry!"));
+					new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(),null));
 			return false;
 		}
 	}
